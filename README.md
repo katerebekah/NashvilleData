@@ -19,15 +19,14 @@ app
 --apiFactory.js
 scripts
 --angular.js
---chart.js
+--ng-google-chart.js **
 stylesheets
 --main.css
 views
 --chart.html
 --list.html
-
-
 ```
+**** ng-google-chart.js can be found [here](http://angular-google-chart.github.io/angular-google-chart/docs/latest/guides/getting-started/).
 
 ------
 ###Instructions
@@ -47,12 +46,12 @@ views
 ####app.js
 ```js
 //be sure to add the google chart directive to the app in the initial declaration
-var app = angular.module('nashvilleData', ['googlechart']); 
+var app = angular.module('nashvilleChart', ['googlechart']); 
 ```
 ####chartController.js
 Include this code in your chartController and use the addChartRow function to add rows to the chart. 
 ```js
-function addChartRow (nameOfService, numberOfProviders){
+function addChartRow (nameOfContactType, numberOfProviders){
     var chartDatum = {
         c: [
             { v: nameOfService },
@@ -80,3 +79,4 @@ $scope.chartObject = {
 ###Notes
 
  - This chart is powered by [Angular Google Chart](https://github.com/angular-google-chart/angular-google-chart/)
+
