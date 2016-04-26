@@ -26,7 +26,7 @@ views
 --chart.html
 --list.html
 ```
-**** ng-google-chart.js can be found [here](http://angular-google-chart.github.io/angular-google-chart/docs/latest/guides/getting-started/).
+** ng-google-chart.js can be found [here](http://angular-google-chart.github.io/angular-google-chart/docs/latest/guides/getting-started/).
 
 ------
 ###Instructions
