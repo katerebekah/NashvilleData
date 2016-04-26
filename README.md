@@ -1,4 +1,5 @@
-#Angular, APIs, and Charts
+Nashville Data
+####Angular, APIs, and Charts
 
 This project queries a open dataset from [data.Nashville.gov](data.nashville.gov) and creates a chart and a list view.
 
