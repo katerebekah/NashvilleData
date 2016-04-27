@@ -1,7 +1,8 @@
 #Nashville Data
-####Angular, APIs, and Charts
 
-This project queries a open dataset from [data.Nashville.gov](data.nashville.gov) and creates a chart and a list view.
+##Angular, APIs, and Charts
+
+For this project, you must use Angular, and the [Angular Google Chart](http://angular-google-chart.github.io/angular-google-chart/docs/latest/guides/getting-started/) library to create a chart based on data from [data.Nashville.gov](data.nashville.gov).
 
 ------
 ###Setup
@@ -9,48 +10,38 @@ This project queries a open dataset from [data.Nashville.gov](data.nashville.gov
 mkdir -p ~/workspace/exercises/rich-browser/nashvilledata && cd $_
 ```
 
-Your basic file structure should look like this:
+Use *npm* to install Angular and charting library.
+
+```bash
+npm install angular angular-route angular-google-chart@0.1.0 --save
 ```
-index.html
-app
---app.js
---homeController.js
---chartController.js
---listController.js
---apiFactory.js
-scripts
---angular.js
---ng-google-chart.js **
-stylesheets
---main.css
-views
---chart.html
---list.html
-```
-** ng-google-chart.js can be found [here](http://angular-google-chart.github.io/angular-google-chart/docs/latest/guides/getting-started/).
 
 ------
 ###Instructions
 
-1. Your app must use angular
-3. Use angular routing to navigate between the partial views
-2. Create an angular factory (apiFactory) that uses $http to call for the json located at https://data.nashville.gov/resource/8zc7-2afq.json
-3. In your chartController, use the json from the apiFactory and reformat it so that each contact_type and the number of resources of that contact_type can be fed into the addChartRows function
-4. In your list.html and listController.js, you will make a list of all of the resources and the contact info from the json from the apiFactory.
+1. Use Angular routing to create two partials for the application.
+    1. A chart partial that shows [**Kate**: fill in the blank here. Be specific.]
+    1. A list partial that shows [**Kate**: fill in the blank here. Be specific.]
+1. Create a factory that uses the `$http` module in Angular to retrieve the JSON located at https://data.nashville.gov/resource/8zc7-2afq.json
+1. In a controller, use the JSON from the factory and reformat it so that each `contact_type` and the number of resources of that contact_type can be fed into the addChartRows function.
+1. In your list.html and listController.js, you will make a list of all of the resources and the contact info from the json from the apiFactory.
 
-####chart.html
+##### Example chart partial
+
 ```html
 <!--add this line to create your chart-->
 <div class="chart" google-chart chart="chartObject"></div> 
 ```
 
-####app.js
+##### Example `app.js`
+
 ```js
-//be sure to add the google chart directive to the app in the initial declaration
-var app = angular.module('nashvilleChart', ['googlechart']); 
+// Be sure to add the google chart directive to the app in the initial declaration
+var NashvilleChart = angular.module('nashvilleChart', ['googlechart']); 
 ```
-####chartController.js
-Include this code in your chartController and use the addChartRow function to add rows to the chart. 
+
+##### Example controller
+
 ```js
 function addChartRow (nameOfContactType, numberOfProviders){
     var chartDatum = {
@@ -75,9 +66,4 @@ $scope.chartObject = {
     }
 }
 ```
-
-------
-###Notes
-
- - This chart is powered by [Angular Google Chart](https://github.com/angular-google-chart/angular-google-chart/)
 
