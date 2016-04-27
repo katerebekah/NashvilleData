@@ -20,8 +20,8 @@ npm install angular angular-route angular-google-chart@0.1.0 --save
 ###Instructions
 
 1. Use Angular routing to create two partials for the application.
-    1. A chart partial that shows [**Kate**: fill in the blank here. Be specific.]
-    1. A list partial that shows [**Kate**: fill in the blank here. Be specific.]
+    1. A chart partial that shows the different types of community resources available (listed under the contact_type in the JSON resource) and the number of resources available of each type.
+    1. A list partial that shows the name (contact), type (contact_type), phone number, and notes, if any, for each resource. 
 1. Create a factory that uses the `$http` module in Angular to retrieve the JSON located at https://data.nashville.gov/resource/8zc7-2afq.json
 1. In a controller, use the JSON from the factory and reformat it so that each `contact_type` and the number of resources of that contact_type can be fed into the addChartRows function.
 1. In your list.html and listController.js, you will make a list of all of the resources and the contact info from the json from the apiFactory.
@@ -29,7 +29,7 @@ npm install angular angular-route angular-google-chart@0.1.0 --save
 ##### Example chart partial
 
 ```html
-<!--add this line to create your chart-->
+<!-- Add this line to create your chart-->
 <div class="chart" google-chart chart="chartObject"></div> 
 ```
 
