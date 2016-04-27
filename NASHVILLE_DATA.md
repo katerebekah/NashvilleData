@@ -46,7 +46,7 @@ var NashvilleChart = angular.module('nashvilleChart', ['googlechart']);
 function addChartRow (nameOfContactType, numberOfProviders){
     var chartDatum = {
         c: [
-            { v: nameOfService },
+            { v: nameOfContactType },
             { v: numberOfProviders }
         ]
     };
